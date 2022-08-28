@@ -25,15 +25,17 @@ video::-webkit-media-controls {
    position: absolute;
    top: 50%;
    left: 50%;
-   transform: translate(-50%, calc(-50% - 50px));
+   transform: translate(-50%, calc(-50% - 100px));
    background-color: white;
    display: inline-flex;
    flex-direction: column;
    align-items: center;
-   padding: 8px 20px;
+   padding: 12px 20px;
    row-gap: 8px;
    animation: upDown 2s infinite reverse;
    font-size: 18px;
+   text-align: center;
+   border-radius: 6px;
 }
 
 .image {
@@ -45,15 +47,17 @@ video::-webkit-media-controls {
    position: absolute;
    top: 50%;
    left: 50%;
-   transform: translate(-50%, 76px);
+   transform: translate(-50%, 50px);
    background-color: white;
-   padding: 8px 20px;
+   padding: 12px 20px;
    display: inline-flex;
    flex-direction: column;
    align-items: center;
-   row-gap: 8px;
+   row-gap: 12px;
    animation: leftRight 2s infinite reverse;
    animation-delay: 500ms;
+   text-align: center;
+   border-radius: 6px;
 }
 
 .rights {
@@ -66,28 +70,53 @@ video::-webkit-media-controls {
 
 @keyframes upDown {
    0% {
-      transform: translate(-50%, calc(-50% - 80px));
+      transform: translate(-50%, calc(-50% - 100px)) rotate(10deg);
    }
 
    50% {
-      transform: translate(-50%, calc(-50% + 20px));
+      transform: translate(-50%, calc(-50% - 100px)) rotate(-10deg);
    }
 
    100% {
-      transform: translate(-50%, calc(-50% - 80px));
+      transform: translate(-50%, calc(-50% - 100px)) rotate(10deg);
    }
 }
 
 @keyframes leftRight {
    0% {
-      transform: translate(calc(-50% - 50px), 76px);
+      transform: translate(calc(-50% - 50px), 50px);
    }
 
    50% {
-      transform: translate(calc(-50% + 50px), 76px);
+      transform: translate(calc(-50% + 50px), 50px);
    }
 
    100% {
-      transform: translate(calc(-50% - 50px), 76px);
+      transform: translate(calc(-50% - 50px), 50px);
+   }
+}
+
+@media (max-width: 720px) {
+   .video {
+      min-width: 1440px;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+
+   .introContainer {
+      font-size: 16px;
+   }
+
+   .image {
+      width: 32px;
+      height: 32px;
+   }
+
+   .songContainer {
+      font-size: 14px;
+   }
+
+   .rights {
+      font-size: 13px;
    }
 }

@@ -18,7 +18,7 @@ export default function Home() {
                <img className={styles.image} src={kappa} />
             </div>
             <div className={styles.songContainer}>
-               Та бүхэн үзээрийн эмо дууг нь сонсоорой.
+               Та бүхэн үзээрийн эмо дууг нь сонсоорой
                <audio src={song} controls />
             </div>
             <div className={styles.rights}>
