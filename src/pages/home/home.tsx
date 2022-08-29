@@ -21,11 +21,8 @@ export default function Home() {
                <img className={styles.image} src={kappa} />
             </div>
             <div className={styles.songContainer}>
-               Та бүхэн дууг нь сонсоорой
+               Та бүхэн дууг нь сонсоорой :)
                <audio src={song} controls />
-            </div>
-            <div className={styles.rain}>
-               I'll be fucked up in the rain
             </div>
             <div className={styles.rights}>
                All rights partially reserved Ⓒ 2022 by Erchis
